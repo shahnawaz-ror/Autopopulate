@@ -1,0 +1,1903 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (103.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (100.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateEmployees (20181115112105)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "employees" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "emp_id" varchar, "emp_roll" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181115112105_create_employees.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181115112105"]]
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (95.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-15 11:21:17.881826"], ["updated_at", "2018-11-15 11:21:17.881826"]]
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (57.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-11-15 16:52:15 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:56:in `load_missing_constant'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-15 16:52:29 +0530
+  
+AbstractController::ActionNotFound (The action 'search' could not be found for EmployeesController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-15 16:52:52 +0530
+Processing by EmployeesController#search as HTML
+Completed 406 Not Acceptable in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (EmployeesController#search is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-15 16:53:10 +0530
+Processing by EmployeesController#search as HTML
+Completed 406 Not Acceptable in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (EmployeesController#search is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-15 16:53:26 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2415ms (Views: 2413.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 16:59:26 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 16:59:28 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 16:59:35 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 16:59:42 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:00:04 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:00:16 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:00:26 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:00:48 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:01:41 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:02:12 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:02:57 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/views/employees/search.html.erb:4: syntax error, unexpected ','
+...pend=( text_field_tag :emp_id,, params[:emp_id], :placeholde...
+...                              ^
+/home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/views/employees/search.html.erb:4: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+...arams[:emp_id], :placeholder => "employee id" );@output_buff...
+...                             ^~):
+  
+app/views/employees/search.html.erb:4: syntax error, unexpected ','
+app/views/employees/search.html.erb:4: syntax error, unexpected =>, expecting &. or :: or '[' or '.'
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:03:08 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:03:37 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2018-11-15 17:03:47 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (33.6ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:16
+  Rendered employees/index.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 539ms (Views: 30.1ms | ActiveRecord: 34.2ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2018-11-15 17:03:49 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (113.3ms)
+  Rendered employees/new.html.erb within layouts/application (137.5ms)
+Completed 200 OK in 201ms (Views: 186.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2018-11-15 17:03:58 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pWEBfArnv7IjAPatPmiyFP6qdHGhusqR58Luh+ROY8uamP+O5KabYs1yYpnqFlIZY7PfrkGo2Rl8mu7H2Zr7PA==", "employee"=>{"name"=>"john smith", "emp_id"=>"test", "emp_roll"=>"45211"}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:33
+  [1m[36mEmployee Create (75.9ms)[0m  [1m[32mINSERT INTO "employees" ("name", "emp_id", "emp_roll", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "john smith"], ["emp_id", "test"], ["emp_roll", "45211"], ["created_at", "2018-11-15 11:33:58.928396"], ["updated_at", "2018-11-15 11:33:58.928396"]]
+  ↳ app/controllers/employees_controller.rb:33
+  [1m[35m (174.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:33
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 259ms (ActiveRecord: 250.9ms)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2018-11-15 17:03:59 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:70
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 122ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2018-11-15 17:04:01 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:16
+  Rendered employees/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2018-11-15 17:04:02 +0530
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (3.0ms)
+  Rendered employees/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 80ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for 127.0.0.1 at 2018-11-15 17:04:11 +0530
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DwieENVBzcskAu6aLAUpSNNueif6w0+p6AcBt+VWPXgw8WDiOwDpG8pweq74e8lFTnfR+BrRXCFzXwH32IKljw==", "employee"=>{"name"=>"Michecl jackson", "emp_id"=>"aaaa", "emp_roll"=>"asasasas"}, "commit"=>"Create Employee"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:33
+  [1m[36mEmployee Create (16.0ms)[0m  [1m[32mINSERT INTO "employees" ("name", "emp_id", "emp_roll", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Michecl jackson"], ["emp_id", "aaaa"], ["emp_roll", "asasasas"], ["created_at", "2018-11-15 11:34:11.997067"], ["updated_at", "2018-11-15 11:34:11.997067"]]
+  ↳ app/controllers/employees_controller.rb:33
+  [1m[35m (252.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:33
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 280ms (ActiveRecord: 268.1ms)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2018-11-15 17:04:12 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:70
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2018-11-15 17:04:14 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:16
+  Rendered employees/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/employees" for 127.0.0.1 at 2018-11-15 17:06:04 +0530
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:16
+  Rendered employees/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2018-11-15 17:06:06 +0530
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:70
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 90ms (Views: 87.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:06:09 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:06:42 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:06:50 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:07:13 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:09:01 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery3' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/config
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/images
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/javascripts
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/stylesheets
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/actioncable-5.2.1/lib/assets/compiled
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/activestorage-5.2.1/app/assets/javascripts
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/assets/compiled
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:14
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__4530407511852804162_70044778443740'
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:09:12 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery_ujs' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/config
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/images
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/javascripts
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/stylesheets
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/actioncable-5.2.1/lib/assets/compiled
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/activestorage-5.2.1/app/assets/javascripts
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/assets/compiled
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:14
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__4530407511852804162_70044845906860'
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:09:22 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:10:50 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:10:56 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:12:17 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:12:39 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:13:06 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/config
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/images
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/javascripts
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/stylesheets
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/actioncable-5.2.1/lib/assets/compiled
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/activestorage-5.2.1/app/assets/javascripts
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/assets/compiled
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__4530407511852804162_70044585895560'
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:13:18 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/config
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/images
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/javascripts
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/app/assets/stylesheets
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/actioncable-5.2.1/lib/assets/compiled
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/activestorage-5.2.1/app/assets/javascripts
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/actionview-5.2.1/lib/assets/compiled
+  /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/mohammadshahnawaz/Videos/All-project-lasstest/AutoPopulate/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__4530407511852804162_70044586693680'
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:14:16 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 304ms (Views: 293.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:17:01 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:17:28 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=sw" for 127.0.0.1 at 2018-11-15 17:17:31 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/get_emplyee_info"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/get_emplyee_info?name=swa" for 127.0.0.1 at 2018-11-15 17:17:34 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/get_emplyee_info"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/get_emplyee_info?name=swa" for 127.0.0.1 at 2018-11-15 17:18:34 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"swa"}
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:18:35 +0530
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 29037ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:19:04 +0530
+Processing by EmployeesController#search as HTML
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.1ms)
+  Rendered employees/search.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:19:07 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:19:15 +0530
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:19:15 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 1442ms (ActiveRecord: 0.0ms)
+
+
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 10660ms (ActiveRecord: 0.0ms)
+
+
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 3406ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:19:21 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 2303ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:19:28 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:19:31 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:19:31 +0530
+  Parameters: {"name"=>"jo"}
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 1172ms (ActiveRecord: 0.0ms)
+
+
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 4903ms (ActiveRecord: 0.0ms)
+
+
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 440ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:19:39 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mohammadshahnawaz/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.4ms)
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:19:39 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+Completed 200 OK in 4779ms (Views: 4768.8ms | ActiveRecord: 0.0ms)
+
+
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 4646ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:19:48 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (21.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%j%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/controllers/employees_controller.rb:15
+No template found for EmployeesController#get_emplyee_info, rendering head :no_content
+Completed 204 No Content in 29285ms (ActiveRecord: 22.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:21:10 +0530
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:21:20 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 500 Internal Server Error in 63ms (Views: 59.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:21:23 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 500 Internal Server Error in 5ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:21:26 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 500 Internal Server Error in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:21:27 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 500 Internal Server Error in 4ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:21:27 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 500 Internal Server Error in 5ms (Views: 1.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:22:19 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%john%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%john%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `json_formatter' for #<EmployeesController:0x00007f613c25c458>):
+  
+app/controllers/employees_controller.rb:15:in `get_emplyee_info'
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:22:20 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 139ms (Views: 137.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:22:22 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%j%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%j%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `json_formatter' for #<EmployeesController:0x00007f61316878a8>):
+  
+app/controllers/employees_controller.rb:15:in `get_emplyee_info'
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:22:24 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%jo%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%jo%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `json_formatter' for #<EmployeesController:0x00007f6131501150>):
+  
+app/controllers/employees_controller.rb:15:in `get_emplyee_info'
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:22:25 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%joh%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.0ms)
+
+
+  
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:22:25 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%joh%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%john%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `json_formatter' for #<EmployeesController:0x00007f613dab0950>):
+  
+app/controllers/employees_controller.rb:15:in `get_emplyee_info'
+  [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE (name like '%john%') LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/mohammadshahnawaz/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `json_formatter' for #<EmployeesController:0x00005573ff41e7e0>):
+  
+app/controllers/employees_controller.rb:15:in `get_emplyee_info'
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:22:40 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:22:41 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:22:43 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:22:44 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:22:45 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:22:45 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:24:08 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:24:11 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:24:11 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:24:11 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:24:11 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:24:46 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:24:49 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:24:49 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:24:49 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:24:49 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:24:57 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:24:58 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:25:00 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:25:00 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:25:00 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:25:00 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:25:14 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 37ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:25:14 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:25:17 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:25:17 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:25:17 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:25:17 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:25:49 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:28:15 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 60ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:28:19 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:28:21 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:28:22 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:28:22 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=johna" for 127.0.0.1 at 2018-11-15 17:28:22 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"johna"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%johna%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:28:23 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:28:24 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:28:25 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=john+" for 127.0.0.1 at 2018-11-15 17:28:25 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john "}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john %')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john+sm" for 127.0.0.1 at 2018-11-15 17:28:25 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john sm"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john sm%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john+sm" for 127.0.0.1 at 2018-11-15 17:28:25 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john sm"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john sm%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john+smi" for 127.0.0.1 at 2018-11-15 17:28:26 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john smi"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john smi%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john+smit" for 127.0.0.1 at 2018-11-15 17:28:26 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john smit"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john smit%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=john+smith" for 127.0.0.1 at 2018-11-15 17:28:26 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john smith"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john smith%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:28:29 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:28:29 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:28:29 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=fd" for 127.0.0.1 at 2018-11-15 17:28:50 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"fd"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%fd%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:28:54 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=f" for 127.0.0.1 at 2018-11-15 17:29:25 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"f"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%f%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:29:31 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:30:06 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=3" for 127.0.0.1 at 2018-11-15 17:30:10 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"3"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%3%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-15 17:31:38 +0530
+Processing by EmployeesController#search as HTML
+  Rendering employees/search.html.erb within layouts/application
+  Rendered employees/search.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 90ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:31:41 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:31:42 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:31:42 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:31:42 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:31:43 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:31:43 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:31:44 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:31:44 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:31:58 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=m" for 127.0.0.1 at 2018-11-15 17:32:01 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"m"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%m%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=mi" for 127.0.0.1 at 2018-11-15 17:32:06 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mi"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mi%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=mich" for 127.0.0.1 at 2018-11-15 17:32:07 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mich"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mich%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=mich" for 127.0.0.1 at 2018-11-15 17:32:07 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mich"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mich%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=michel" for 127.0.0.1 at 2018-11-15 17:32:07 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"michel"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%michel%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=michel" for 127.0.0.1 at 2018-11-15 17:32:07 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"michel"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%michel%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=michelc" for 127.0.0.1 at 2018-11-15 17:32:07 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"michelc"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%michelc%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=michel" for 127.0.0.1 at 2018-11-15 17:32:08 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"michel"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%michel%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=miche" for 127.0.0.1 at 2018-11-15 17:32:08 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"miche"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%miche%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=mich" for 127.0.0.1 at 2018-11-15 17:32:09 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mich"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mich%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=mic" for 127.0.0.1 at 2018-11-15 17:32:09 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mic"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mic%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=mi" for 127.0.0.1 at 2018-11-15 17:32:09 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mi"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mi%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=m" for 127.0.0.1 at 2018-11-15 17:32:10 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"m"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%m%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:32:10 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:32:10 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=j" for 127.0.0.1 at 2018-11-15 17:32:11 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"j"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%j%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=jo" for 127.0.0.1 at 2018-11-15 17:32:11 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"jo"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%jo%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=joh" for 127.0.0.1 at 2018-11-15 17:32:11 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"joh"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%joh%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:32:11 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john" for 127.0.0.1 at 2018-11-15 17:32:14 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=john+" for 127.0.0.1 at 2018-11-15 17:32:15 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john "}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john %')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+" for 127.0.0.1 at 2018-11-15 17:32:15 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j "}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j %')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+" for 127.0.0.1 at 2018-11-15 17:32:15 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j "}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j %')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+" for 127.0.0.1 at 2018-11-15 17:32:15 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j "}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j %')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfd" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfd"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfd%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfd" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfd"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfd%')[0m
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfd" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+  ↳ app/controllers/employees_controller.rb:15
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfd"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfd%')[0m
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfd" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfd"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfd%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfd" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfd"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfd%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfdg+" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfdg "}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfdg %')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfdg+" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfdg "}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfdg %')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfdg+gf" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfdg gf"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfdg gf%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfdg+gf" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfdg gf"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfdg gf%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfdg+g" for 127.0.0.1 at 2018-11-15 17:32:16 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfdg g"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfdg g%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfdg+" for 127.0.0.1 at 2018-11-15 17:32:17 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfdg "}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfdg %')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=john+fd%2Cj+gfdg" for 127.0.0.1 at 2018-11-15 17:32:17 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"john fd,j gfdg"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%john fd,j gfdg%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:32:18 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=m" for 127.0.0.1 at 2018-11-15 17:32:19 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"m"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%m%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=mi" for 127.0.0.1 at 2018-11-15 17:32:19 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mi"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mi%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=mich" for 127.0.0.1 at 2018-11-15 17:32:19 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mich"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mich%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=mich" for 127.0.0.1 at 2018-11-15 17:32:19 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mich"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mich%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/get_emplyee_info?name=michel" for 127.0.0.1 at 2018-11-15 17:32:19 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"michel"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%michel%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=michel" for 127.0.0.1 at 2018-11-15 17:32:19 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"michel"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%michel%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=miche" for 127.0.0.1 at 2018-11-15 17:32:20 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"miche"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%miche%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/get_emplyee_info?name=mich" for 127.0.0.1 at 2018-11-15 17:32:21 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mich"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mich%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=mic" for 127.0.0.1 at 2018-11-15 17:32:21 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mic"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mic%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=mi" for 127.0.0.1 at 2018-11-15 17:32:21 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"mi"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%mi%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=m" for 127.0.0.1 at 2018-11-15 17:32:21 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>"m"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%m%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:32:22 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/get_emplyee_info?name=" for 127.0.0.1 at 2018-11-15 17:32:22 +0530
+Processing by EmployeesController#get_emplyee_info as JSON
+  Parameters: {"name"=>""}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE (name like '%%')[0m
+  ↳ app/controllers/employees_controller.rb:15
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
