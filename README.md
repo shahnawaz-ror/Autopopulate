@@ -25,11 +25,9 @@ Things you may want to cover:
 Firt take a clone then run below commands
 ```
 rake db:create
-```
-```
+
 rake db:migrate
-```
-```
+
 rails s
 ```
 
