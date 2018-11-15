@@ -11,7 +11,10 @@ class EmployeesController < ApplicationController
   end
 
   def get_emplyee_info
-    @employee = Employee.where('name like ?', "%#{params[:name]}%")
+    puts params
+    @employee = Employee.where('name like ?', "%#{params[:name]}") if params[:name].present?
+    @employee = Employee.where('emp_id like ?', "%#{params[:emp_id]}") if params[:emp_id].present?
+    @employee = Employee.where('emp_roll like ?', "%#{params[:emp_roll]}") if params[:emp_roll].present?
     if @employee.present?
       render json: { data: @employee.first }
     else

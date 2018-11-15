@@ -1,3 +1,4 @@
+<h6 id="show-err">Did not found any match</h6>
 <%= form_tag employees_search_path, :method => :get do %>
   <p>
     <%= text_field_tag :name, params[:name], :placeholder => "Name" %>
@@ -6,29 +7,43 @@
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
+<%= link_to 'Employee', employees_path %>
+
+
 <script type="text/javascript">
 $(document).ready(function(){
-
-$("#name").keyup(function(){
-      var name = $(this).val();
+  $('#show-err').hide();
+$("#name, #emp_id, #emp_roll").keyup(function(){
+    var ids = ['name', 'emp_id','emp_roll']
+    var index = ids.indexOf(this.id);
+    if (index > -1) {
+       ids.splice(index, 1);
+    }
+      var name = $('#name').val();
+      var emp_id = $('#emp_id').val();
+      var emp_roll = $('#emp_roll').val();
       $.ajax({
         url:"/get_emplyee_info",
         method:"get",
         dataType: "json",
-        data:{ name : name},
+        data:{ name : name, emp_id: emp_id, emp_roll: emp_roll},
         success :function(data){
           if (data["data"] != null) {
-            $('#emp_id').val(data["data"]["emp_id"])
-            $('#emp_roll').val(data["data"]["emp_roll"]);
+            console.log(data["data"])
+            console.log(ids)
+            $('#show-err').hide();
+            $('#'+ids[0]).val(data["data"][ids[0]])
+            $('#'+ids[1]).val(data["data"][ids[1]])
           }
           else
           {
-            $('#emp_id').val('');
-            $('#emp_roll').val('');
+            $('#'+ids[0]).val('')
+            $('#'+ids[1]).val('')
+            $('#show-err').show();
           }
         }
       });
     });
-});
 
+});
 </script>
